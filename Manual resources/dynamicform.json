@@ -1,0 +1,68 @@
+[
+    {
+        "key":  "searchMailbox",
+        "templateOptions":  {
+                                "label":  "Search Roommailbox",
+                                "required":  true
+                            },
+        "type":  "input",
+        "summaryVisibility":  "Show",
+        "requiresTemplateOptions":  true,
+        "requiresKey":  true,
+        "requiresDataSource":  false
+    },
+    {
+        "key":  "gridmailbox",
+        "templateOptions":  {
+                                "label":  "Select Roommailbox",
+                                "required":  true,
+                                "grid":  {
+                                             "columns":  [
+                                                             {
+                                                                 "headerName":  "Display Name",
+                                                                 "field":  "DisplayName"
+                                                             },
+                                                             {
+                                                                 "headerName":  "Primary Smtp Address",
+                                                                 "field":  "PrimarySmtpAddress"
+                                                             },
+                                                             {
+                                                                 "headerName":  "Email Addresses",
+                                                                 "field":  "EmailAddresses"
+                                                             },
+                                                             {
+                                                                 "headerName":  "Alias",
+                                                                 "field":  "Alias"
+                                                             },
+                                                             {
+                                                                 "headerName":  "Recipient Type Details",
+                                                                 "field":  "RecipientTypeDetails"
+                                                             }
+                                                         ],
+                                             "height":  300,
+                                             "rowSelection":  "single"
+                                         },
+                                "dataSourceConfig":  {
+                                                         "dataSourceGuid":  "$dataSourceGuid_0",
+                                                         "input":  {
+                                                                       "propertyInputs":  [
+                                                                                              {
+                                                                                                  "propertyName":  "searchValue",
+                                                                                                  "otherFieldValue":  {
+                                                                                                                          "otherFieldKey":  "searchMailbox"
+                                                                                                                      }
+                                                                                              }
+                                                                                          ]
+                                                                   }
+                                                     },
+                                "useFilter":  true,
+                                "useDefault":  false,
+                                "allowCsvDownload":  true
+                            },
+        "type":  "grid",
+        "summaryVisibility":  "Show",
+        "requiresTemplateOptions":  true,
+        "requiresKey":  true,
+        "requiresDataSource":  true
+    }
+]
